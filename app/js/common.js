@@ -1,5 +1,11 @@
 $(function () {
 
+	var map = new GMaps({
+		el: '#map',
+		lat: -12.043333,
+		lng: -77.028333
+	});
+
 	$("#place").selectize({
 		item: [0],
 		valueField: 'val',
@@ -12,6 +18,16 @@ $(function () {
 			{ name: 'ОСАГО', val: 'osago' },
 			{ name: 'КАСКО', val: 'kasco' },
 		],
+	})
+
+	$('#news-tabs ul.tabs li').click(function () {
+		var tab_id = $(this).attr('data-tab');
+
+		$('#news-tabs ul.tabs li').removeClass('current');
+		$('#news-tabs .tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#news-tabs #" + tab_id).addClass('current');
 	})
 
 	$('#profile-tabs ul.tabs li').click(function () {
@@ -68,7 +84,7 @@ $(function () {
 		valueField: 'val',
 		items: ['ru'],
 		options: [
-			{ name: 'O\'zbek', val: 'uz', selected: true},
+			{ name: 'O\'zbek', val: 'uz', selected: true },
 			{ name: 'Русский', val: 'ru' },
 			{ name: 'English', val: 'en' },
 		],
