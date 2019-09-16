@@ -7,30 +7,423 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.header-content
-		.responsive-img
-			width: auto
-			max-width: 100%
-	.phone
-		padding-right: 50px
+	.header
+		.menu
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 14px
+			height: auto
+			img.logo-min
+				// display: block
+				margin-right: 10px
+			img.logo
+				// display: none
+			&-items
+				display: flex
+				justify-content: flex-end
+				align-items: center
+				>ul
+					font-size: 12px
+					>li
+						padding: 25px 0
+						&:hover 						
+							.menu-drop
+								display: block
+								
+						i
+							margin-left: 10px
+							margin-right: 20px
+						
+						&:last-child
+							margin-right: 20px
+				.btn
+					padding: 10px
 
+			.menu-drop				
+				padding: 50px 0
+				.menu-items-drop
+					display: flex
+					align-content: space-between
+					flex-direction: column
+					.market-center
+						display: flex
+						flex-direction: column
+						flex-basis: 45%
+						.auto-journey
+							display: flex
+							flex-direction: row
+						.place
+							margin-top: 10px
+							display: flex
+							flex-direction: row
+
+						.market:first-child
+							flex-basis: 45%
+							// padding: 0 15px
+					.market
+						margin-bottom: 10px
+						line-height: 120%
+						&:last-child
+							margin-bottom: 0
+						&-title
+							font-weight: bold
+							font-size: 13px
+							color: #fff
+							margin-bottom: 10px
+						>ul
+							>li
+								list-style: none
+								margin-bottom: 5px
+								font-size: 11px
+								a
+									color: $dropC
+									&:hover
+										text-decoration: none
+										color: #ffffff
+								&:last-child
+									margin-bottom: 0
+					.market-left
+						flex-basis: 100%
+						padding: 0 0px
+						margin-bottom: 10px
+					.health
+						flex-basis: 25%
+						padding: 0 0px
+						margin-top: 10px
+	.header
+		.banner
+			&-carousel
+				&-item					
+					min-height: 550px					
+					&-text						
+						transform: translateY(-40px)
+						h1, h2
+							line-height: 100%
+							margin-bottom: 15px
+							font-size: 40px
+							text-align: center
+						h2
+							font-size: 24px
+						.btn
+							font-size: 12px
+			.align-tabs
+				margin-top: -185px
+
+				.nav
+					margin-bottom: 20px
+
+					
+			#tabs
+				font-size: 13px				
+				.tab-nav
+					display: flex
+					justify-content: space-between
+					align-items: center
+				ul.tabs					
+					display: flex
+					justify-content: center	
+					li
+						display: inline-block
+						padding: 0 15px
+						
+					
+
+				.tab-content
+					display: none
+					padding: 20px 25px
+				
+					&.current
+						display: inherit
+
+				.form-tab
+					font-size: 13px
+					display: flex
+					justify-content: space-between
+					align-items: center
+
+					>ul
+						>li
+							display: block
+							&:first-child
+								margin-right: 25px
+
+					form
+						display: flex
+						.selectize-input
+							width: 120px
+							height: 100%
+							margin-right: 10px
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							padding-left: 15px
+						input[text]
+							padding: 5px 20px
+							width: 375px
+							border-radius: 4px
+							border: none
+							outline: none
+							margin-right: 10px
+						.btn
+							text-transform: uppercase
+							font-size: 13px
+
+	.eia-profile
+		#profile-tab-1
+			.wrapper
+				flex-direction: column
+			
+			.map
+				height: 300px
+				
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.ishome h1
-		font-size: em(34)
-	.s-profile .col-md-6:last-child
-		.button
-			margin-top: 20px
-	.testimonials-item
-		.testimonials-desc
-			padding: 15px
+	.header
+		.menu			
+			img.logo-min
+				display: block
+				margin-right: 10px
+			img.logo
+				display: none
+
+	.header
+		.banner
+			&-carousel
+				&-item					
+					min-height: 450px					
+					&-text						
+						transform: translateY(-40px)
+						h1, h2
+							line-height: 100%
+							margin-bottom: 15px
+							font-size: 30px
+							text-align: center
+						h2
+							font-size: 20px
+						.btn
+							font-size: 12px
+			.align-tabs
+				margin-top: -200px
+
+				.nav
+					margin-bottom: 11px
+
+					
+			#tabs
+				font-size: 11px				
+				.tab-nav
+					display: flex
+					justify-content: space-between
+					align-items: center
+					span
+						font-size: 11px
+				ul.tabs					
+					li
+						display: inline-block
+						padding: 0 15px
+						cursor: pointer
+						&:first-child
+							padding-left: 0
+						
+					
+
+				.tab-content
+					display: none
+					padding: 20px 15px
+
+				.form-tab
+					font-size: 11px
+					display: flex
+					flex-direction: column
+
+					>ul
+						>li
+							margin-top: 10px
+							display: inline-block
+							
+
+					form						
+						.btn
+							font-size: 11px
+
+	.eia-profile
+		.profile-tab-nav
+			
+			padding: 20px 25px
+			padding-bottom: 8px
+
+
+			>ul.tabs
+				margin: 0px
+				padding: 0px
+				
+				>li					
+					font-size: 12px
+		#profile-tab-1
+			.wrapper
+				flex-direction: column
+
+				.cards
+					.card
+						flex-basis: 100%
+			
+				.map
+					height: 300px
+
+		#profile-tab-2		
+
+			.cards
+				.card
+					flex-basis: 100%
+		
+			.map
+				height: 300px
+
+	.news
+		.cards
+			.card
+				.card-text
+					padding: 15px
+					font-size: 12px
+					.title
+						font-weight: 500
+				margin-bottom: 0
+		.more
+			.btn
+				margin-bottom: 30px
+
+
+	#site-map-1
+		.markets
+			.market
+				&-title
+					font-size: 14px
+				>ul
+					font-size: 11px
+					>li
+						margin-bottom: 10px
+
+	#site-map-2
+		.markets
+			// flex-wrap: wrap
+			.market
+				&-title
+					font-size: 14px
+				.app-title
+					margin-bottom: 10px
+					&+ul
+						font-size: 11px
+						flex-direction: column
+						>li
+							margin-bottom: 10px
+				.phone
+					font-size: 20px
+					letter-spacing: -1px
+				.socials
+					margin-top: 10px
+					margin-bottom: 10px
+				&:last-child
+					margin-bottom: 20px
+
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.header
+		.top-blue-bar
+			font-size: 12px	
+			
+			.top-blue-bar-inner			
+				// height: 40px
 
-	.testimonials-item
-		margin-bottom: 60px
+				ul
+					li
+						display: block
+						margin-right: 5px
+				.selectize-input
+					font-size: 12px		
+				.selectize-dropdown-content
+					font-size: 12px	
+
+		.menu
+			display: flex
+			justify-content: space-between
+			align-items: center
+			height: auto
+			padding: 5px 0
+			img.logo-min
+				display: block
+				margin-right: 10px
+			img.logo
+				display: none
+			&-items
+				display: flex
+				justify-content: flex-end
+				align-items: center
+				// flex-direction: row-reverse
+				>ul
+					font-size: 12px
+					// flex-direction: column
+					>li
+						padding: 0px 0
+						display: block
+						&:hover 						
+							.menu-drop
+								display: block
+								
+						i
+							margin-left: 10px
+							margin-right: 20px
+						
+						&:last-child
+							margin-right: 20px
+				.btn
+					padding: 8px	
+					font-size: 12px
+
+	.news
+		.cards
+			// flex-direction: column
+			// width: 75%
+			margin-right: auto
+			margin-left: auto
+			.card			
+				display: flex
+				flex-direction: column
+				.img
+					height: 100%
+				.card-text
+					padding: 15px
+					font-size: 12px
+					.title
+						font-weight: 500
+		.more
+			.btn
+				margin-bottom: 30px
+
+	#site-map-1
+		.markets
+			flex-wrap: wrap
+			
+
+	.footer
+		.wrapper
+			flex-direction: row
+			.left-side
+				flex-direction: column
+				align-items: flex-start
+				.desc 
+					margin-left: 0
+					margin-top: 5px
+			.right-side
+				flex-direction: column
+				align-items: flex-end
+				.author
+					margin-right: 0
+					margin-bottom: 5px
+
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -53,53 +446,308 @@
 		-ms-animation: none !important
 		animation: none !important
 
-	.mnu-line
-		text-align: center
-		.logo
-			display: inline-block
-		.phone
-			text-align: center
-			padding: 0
-			margin-top: 25px
-		.toggle-mnu 
-			top: -50px
-		.hidden-mnu
-			font-size: em(15px)
-			text-transform: uppercase
+@media only screen and (max-width : 645px)
+	.header
+		.menu			
+			&-items
+				>ul
+					font-size: 12px
+					flex-direction: column
+			.menu-drop		
+				margin-top: 40px		
+				padding: 20px 0
 
-	.s-profile
-		h2
-			margin-top: 30px
+	.header
+		.banner
+			&-carousel
+				&-item					
+					min-height: 450px					
+					&-text						
+						transform: translateY(-40px)
+						h1, h2
+							line-height: 100%
+							margin-bottom: 15px
+							font-size: 30px
+							text-align: center
+						h2
+							font-size: 18px
+						.btn
+							font-size: 12px
+			.align-tabs
+				margin-top: -160px
+
+				.nav
+					margin-bottom: 11px
+
+					
+			#tabs
+				font-size: 11px		
+				.tab-nav
+					display: flex
+					justify-content: space-between
+					align-items: center
+					padding: 5px 5px
+					padding-top: 10px
+					flex-basis: 40%
+					span
+						display: none
+						font-size: 11px
+					ul.tabs	
+						justify-content: space-between
+						flex-basis: 100%			
+						li
+							padding: 0 0px
+							
+				.tab-content
+					display: flex
+					display: none
+					padding: 10px 0px
+					
+
+				.form-tab
+					font-size: 11px
+					display: flex
+					flex-direction: column
+					
+
+					>ul
+						>li
+							margin-top: 10px
+							display: inline-block
+									
+
+					form
+						display: flex
+						width: 100%
+						justify-content: center
+						.selectize-input
+							width: 100px
+							margin-right: 10px
+						input[text]
+							width: 200px
+							
+						.btn
+							text-transform: uppercase
+							font-size: 11px
+							padding: 5px 10px
+
 	
-	.ishome
-		h2
-			font-size: em(28px)
+	.news
+		.cards
+			flex-direction: column
+			width: 75%
+			.card
+				display: flex
+				flex-direction: column
+				margin-bottom: 0
+				.card-text
+					padding: 15px
+					font-size: 12px
+					.title
+						font-weight: 500
+		.more
+			.btn
+				margin-bottom: 30px
 
-	.portfolio-popup
-		.td
-			padding-bottom: 15px
-		.h2
-			width: 90%
+	#site-map-2
+		.markets
+			flex-wrap: wrap
+			.market
+				&-title
+					font-size: 14px
+				.app-title
+					margin-bottom: 10px
+					&+ul
+						font-size: 11px
+						flex-direction: column
+						>li
+							margin-bottom: 10px
+				.phone
+					font-size: 15px
+					letter-spacing: -1px
+				.socials
+					margin-bottom: 10px
+				&:last-child
+					flex-basis: 100%
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					.app
+						ul
+							display: flex
+							flex-direction: row
+
+	/* Small Devices, Tablets */
+@media only screen and (max-width : 535px)
+	.header
+		.top-blue-bar
+			.top-blue-bar-inner			
+				
+				.right-block
+					
+					.pl-wrapper
+						display: flex
+						flex-direction: column
+						.phone
+							margin-bottom: 5px
+
+
+	
+	
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	.carousel-brands
-		padding: 0 40px
-		.owl-controls
-			.owl-nav
-				> div
-					left: 15px
-					&.owl-next
-						right: 15px
-	.ishome h1
-		font-size: em(30)
-		margin-top: 30px
-	.header-content 
-	.header-content
-		text-align: center
-		ul
-			li
-				font-size: em(16px)
+	.header
+		.top-blue-bar
+			.top-blue-bar-inner	
+				padding: 5px 0	
+				flex-direction: column
+				height: auto
+				font-size: 11px
+				ul
+					margin-bottom: 5px
+					li
+						display: inline-block
+						margin-right: 5px
+				.selectize-input
+					font-size: 11px
+				.right-block
+					.pl-wrapper
+						flex-direction: row
+		.menu	
+			padding: 5px 0		
+			&-items				
+				>ul
+					font-size: 10px
+					flex-direction: column
+					>li
+						padding: 0px 0
+						display: block
+						&:hover 						
+							.menu-drop
+								display: block
+								
+						i
+							margin-left: 5px
+							margin-right: 20px
+						
+						&:last-child
+							margin-right: 20px
+				.btn
+					padding: 8px	
+					font-size: 12px
+
+
+		.header
+		.menu			
+			&-items
+				>ul
+					font-size: 12px
+					flex-direction: column
+			.menu-drop		
+				margin-top: 40px		
+				padding: 20px 0
+
+	.header
+		.banner
+			&-carousel
+				&-item					
+					min-height: 250px					/**/
+					&-text						
+						transform: translateY(-10px)/**/
+						h1, h2
+							font-size: 25px /**/
+						h2
+							font-size: 14px /**/
+						.btn
+							font-size: 12px
+			.align-tabs
+				margin-top: -40px/**/
+
+					
+			#tabs
+				display: none /**/
+		.order-menu
+			display: block
+
+	.eia-profile
+		.profile-tab-nav
+			
+			padding: 20px 5px
+			padding-bottom: 8px
+
+
+			>ul.tabs
+				margin: 0px
+				padding: 0px
+				
+				>li					
+					font-size: 10px
+		#profile-tab-1
+			.wrapper
+				flex-direction: column
+
+				.cards
+					.card
+						flex-basis: 100%
+						.btn
+							font-size: 12px
+							margin-top: 5px
+							// padding: 10px
+						.logo
+							flex-direction: column			
+				.map
+					height: 300px
+					.btn
+						font-size: 12px
+
+
+		#profile-tab-2		
+
+			.cards
+				.card
+					flex-basis: 100%
+					&-text
+						flex-direction: column
+						.right
+							width: 100%
+							text-align: right
+		
+			.map
+				height: 300px
+
+
+	.news
+		.cards
+			flex-direction: column
+			width: 100%
+
+	#site-map-2
+		.markets
+			.market
+				.phone
+					margin-top: 10px
+					margin-bottom: 10px
+				&:last-child
+					flex-basis: 100%
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					justify-content: space-between
+					.app
+						ul
+							display: flex
+							flex-direction: row
+			
+
+	.footer
+		.wrapper
+			.left-side
+				.desc 
+					font-size: 10px
+			.right-side
+				.author
+					font-size: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

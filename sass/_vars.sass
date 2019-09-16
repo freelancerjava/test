@@ -9,13 +9,17 @@ $gray: #93a1a7
 $dropC: #c8d7ff
 
 
-
+.bg-gray
+	border-top: 1px solid #e5e5e5
+	border-bottom: 1px solid #e5e5e5
+	background-color: #fafafa
 
 
 =mt($time)
 	transition: all $time ease
 
 .btn
+	text-align: center
 	display: flex
 	justify-content: center
 	align-items: center
@@ -29,6 +33,17 @@ $dropC: #c8d7ff
 	font-family: proxima-nova-extra-condensed, sans-serif
 	font-style: normal
 	font-weight: 500
+	+mt(.5s)
+
+
+	&:hover
+		color: #ffffff		
+		+mt(.5s)
+	&:visited
+		color: #ffffff
+	&:active
+		color: #ffffff
+		transform: translateY(2px)
 
 
 	&:hover
@@ -52,12 +67,24 @@ $dropC: #c8d7ff
 
 .blue-btn
 	background-color: #3869e7
+	&:hover
+		background-color: #2a59d3
 
 .green-btn
 	background-color: #9ac446
+	&:hover
+		background-color: #8fbb36
 
 .purple-btn
 	background-color: #85529c
+	&:hover
+		background-color: #793e93
+
+.red
+	color: $red
+
+.blue
+	color: $blue
 
 
 
